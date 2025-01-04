@@ -7,6 +7,14 @@ import cardImage2 from "@/images/feature-2.png";
 import cardImage3 from "@/images/feature-3.png";
 import cardImage4 from "@/images/feature-4.png";
 
+import ToggleOn from "@/svgs/ToggleOn";
+import ImportExport from "@/svgs/ImportExport";
+import Inbox from "@/svgs/Inbox";
+import Dashboard from "@/svgs/Dashboard";
+import BarGraph from "@/svgs/Bargraph";
+import UserIcon from "@/svgs/User";
+import APIIcon from "@/svgs/API";
+
 const featureCards = [
     {
         heading: "Verified Influencer Data",
@@ -33,10 +41,97 @@ const featureCards = [
         image: cardImage4,
     },
 ];
+
+const featureList = [
+                    {
+                        icon: ToggleOn,
+                        title: "Manage your activity",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: ImportExport,
+                        title: "Import/Export data",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: Inbox,
+                        title: "Inquiries",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: Dashboard,
+                        title: "Agency dashboard",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: Dashboard,
+                        title: "Agency Dashboard",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: BarGraph,
+                        title: "Advanced profiles",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: UserIcon,
+                        title: "Influencer profiles",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: APIIcon,
+                        title: "Data automatization",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: ToggleOn,
+                        title: "Manage your activity",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: ImportExport,
+                        title: "Import/Export data",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: Inbox,
+                        title: "Inquiries",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+                    {
+                        icon: Dashboard,
+                        title: "Agency dashboard",
+                        text:
+                            "CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer management,",
+                        secondaryText: "giving you more time to focus on growing your business.",
+                    },
+]
 export default function Features() {
     return (
         <div className="bg-[#e2e8ef]">
-            <section className="container mx-auto px-4 py-24">
+            <section className="container mx-auto px-4 pt-24">
                 <div className="mb-16">
                     <div className="flex items-center gap-2 mb-4">
                         <span className="bg-black h-[7px] w-[22px] rounded-sm"></span>
@@ -89,12 +184,27 @@ export default function Features() {
                     ))}
                 </div>
 
-                <div className="pb-14">
-                    <div className="h-px w-full bg-[#b4c1d0]"></div>
-                </div>
             </section>
 
+                <div className="container  mx-auto pb-14">
+                    <div className="h-px w-full bg-[#b4c1d0]"></div>
+                </div>
+
             {/* Features Grid */}
+            <section className="container mx-auto px-4 pb-44 grid md:grid-cols-4 gap-8 gap-y-16">
+                {featureList.map((feature, index) => (
+                    <div key={index} className="text-white">
+                        <div className="flex gap-4 items-center mb-2">
+                        <feature.icon />
+                        <h3 className="font-semibold text-foreground text-sm">{feature.title}</h3>
+                        </div>
+                        <p className="text-[#374351] text-sm font-bold leading-tight">
+                            {feature.text}
+                            <span className="text-[#728294]">{feature.secondaryText}</span>
+                        </p>
+                    </div>
+                ))}
+            </section>
         </div>
     );
 }
