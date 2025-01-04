@@ -1,12 +1,11 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { ArrowRight, Activity, Users, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-import cardImage1 from '@/images/feature-1.png';
-import cardImage2 from '@/images/feature-2.png';
-import cardImage3 from '@/images/feature-3.png';
-import cardImage4 from '@/images/feature-4.png';
+import cardImage1 from "@/images/feature-1.png";
+import cardImage2 from "@/images/feature-2.png";
+import cardImage3 from "@/images/feature-3.png";
+import cardImage4 from "@/images/feature-4.png";
 
 const featureCards = [
     {
@@ -73,7 +72,11 @@ export default function Features() {
                             )}
                             key={card.heading}
                         >
-                            <Image src={card.image} alt="background image" className="absolute w-full h-full object-cover rounded-xl inset-0"/>
+                            <Image
+                                src={card.image}
+                                alt="background image"
+                                className="absolute w-full h-full object-cover rounded-xl inset-0"
+                            />
                             <div className="relative">
                                 <h3 className="text-[22px] font-bold text-white mb-1">
                                     {card.heading}
@@ -86,7 +89,9 @@ export default function Features() {
                     ))}
                 </div>
 
-                <div className="h-px w-full bg-[#b4c1d0]"></div>
+                <div className="pb-14">
+                    <div className="h-px w-full bg-[#b4c1d0]"></div>
+                </div>
             </section>
 
             {/* Features Grid */}
