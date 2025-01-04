@@ -28,7 +28,7 @@ export default function Hero() {
                         <Input
                             type="email"
                             placeholder="YOUR@EMAIL.COM"
-                            className="bg-transparent border-none outline-none text-black placeholder:text-black font-display pr-12 relative pl-10 w-[330px] h-9 font-bold text-xs"
+                            className="bg-transparent border-none outline-none text-black placeholder:text-black font-display pr-12 relative pl-10 w-[330px] h-9 font-bold text-xs focus-visible:ring-transparent focus-visible:ring-offset-0"
                         />
                     </div>
                     <div className="relative h-9 -translate-x-[33px]">
