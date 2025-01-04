@@ -13,7 +13,7 @@ export default function Header () {
                             <Logo />
                         </span>
                     </div>
-                    <div className="hidden md:flex items-center gap-8 text-gray-200 font-display text-xs font-semibold">
+                    <div className="hidden md:flex items-center gap-8 text-white font-display text-xs font-semibold">
                         {links.map((text, index) => {
                             if (index === 1) {
                                 return (
